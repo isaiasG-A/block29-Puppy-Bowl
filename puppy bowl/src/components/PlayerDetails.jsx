@@ -22,7 +22,7 @@ export default function PlayerDetails({setPuppyId}) {
       <h3>{puppy.breed}</h3>
       <img src={puppy.imageUrl}/>
       <button>Delete Puppy</button>
-      <Link to ="/"><button>Home</button></Link>
+      <Link to="/"><button>Home</button></Link>
     </div>
   );
 }

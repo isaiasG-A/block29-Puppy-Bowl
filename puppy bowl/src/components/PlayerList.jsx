@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 
 export default function PlayerList({setSelectedPuppy}) {
-
   const [puppies, setPuppies] = useState([]);
 
   useEffect(() => {
@@ -23,6 +22,7 @@ export default function PlayerList({setSelectedPuppy}) {
   return (
     <>
     <div>
+      <Link to='/newPlayer'><button>New Player</button></Link>
       {
        puppies.map((puppy) => {
         return (
