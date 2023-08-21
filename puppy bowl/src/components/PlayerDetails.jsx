@@ -16,12 +16,29 @@ export default function PlayerDetails({setPuppyId}) {
     }
     fetchPuppy()
   },[])
+
+  async function deletePlayer() {
+try {
+  const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/COHORT-NAME/players/${setPuppyId}`,
+    {
+      method: 'DELETE',
+    }
+  );
+  const result = await response.json();
+  console.log(result);
+} catch (err) {
+  console.error(err);
+}
+} 
+
+ 
+
   return (
     <div>
       <h3>Name: {puppy.name}</h3>
       <h3>Breed: {puppy.breed}</h3>
       <img src={puppy.imageUrl}/>
-      <button>Delete Puppy</button>
+      <Link to="/"><button onClick={deletePlayer}>Delete Puppy</button></Link>
       <Link to="/"><button>Home</button></Link>
     </div>
   );
