@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-
-
 export default function PlayerList({setSelectedPuppy}) {
   const [puppies, setPuppies] = useState([]);
 
@@ -19,9 +17,11 @@ export default function PlayerList({setSelectedPuppy}) {
     }
     fetchPuppies();
   },[])
+  
   return (
     <>
     <div>
+      <Link to='/searchBar'><button>Search Player 🔍</button></Link>
       <Link to='/newPlayer'><button>New Player</button></Link>
       {
        puppies.map((puppy) => {

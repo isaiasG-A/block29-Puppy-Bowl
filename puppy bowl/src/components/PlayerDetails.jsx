@@ -18,8 +18,8 @@ export default function PlayerDetails({setPuppyId}) {
   },[])
   return (
     <div>
-      <h3>{puppy.name}</h3>
-      <h3>{puppy.breed}</h3>
+      <h3>Name: {puppy.name}</h3>
+      <h3>Breed: {puppy.breed}</h3>
       <img src={puppy.imageUrl}/>
       <button>Delete Puppy</button>
       <Link to="/"><button>Home</button></Link>
